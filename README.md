@@ -38,7 +38,7 @@ This R code is provided under MIT Licence (see LICENSE file attached)
 - [diag_last_1000k.R](R/diag_last_1000k.R) generates the data  ([quantiles_part_1.Rda](RData/quantiles_part_1.Rda)) as well as a figure similar to Figure 4, 
 but the figure actually published underwent further editing for nice placement of labels. 
 - [diag_last_2500k.R](R/diag_last_2500k.R) generates the data 
-([quantiles_part_1.Rda](RData/quantiles_part_1.Rda)) 
+([quantiles_25Myr_part_3.Rda](RData/quantiles_25Myr_part_3.Rda)) 
 as well as a figure similar to Extended Data Figure 5,
 but the  published figure underwent further editing for nice placement of labels. 
 
