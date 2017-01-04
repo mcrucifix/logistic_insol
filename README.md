@@ -21,15 +21,15 @@ accepted for publication in Nature (reference to be provided)
 - [detrended_LR04_smoothed.csv](Data/detrended_LR04_smoothed.csv)
 - [detrended_S05.csv](Data/detrended_S05)
 - [insolations.csv](Data/insolations.csv)
-    - Insolations computed based on the Berger and Loutre (1990) solution and obtained using the `palinsol` R package (see below)
+    - Insolations computed based on the Laskar et al. (2004) astronomical solution and obtained using the `palinsol` R package (see below)
 - [solstice_peaks.csv](Data/solstice_peaks.csv)
     - same as [caloric_peaks.csv](Data/caloric_peaks.csv)  but using summer solstice, as used for Extended Data Figure 9. 
 
 ## R
 
-This R code is provided under MIT Licence (see LICENCE file attached)
+This R code is provided under MIT Licence (see LICENSE file attached)
 
-- [main.R] is the master file which load experiment parameters and generate simulation output in the [RData](RData) directory
+- [main.R](R/master.R) is the master file which load experiment parameters and generate simulation output in the [RData](RData) directory
 
 - [experiment.R](R/experiment.R) contains the MCMC simulation procedure
 - [analysis_function.R](R/analysis_function.R) contains supporting functions
@@ -64,8 +64,7 @@ we also use the following packages for plotting:
 - Erich Neuwirth (2014). RColorBrewer: ColorBrewer Palettes. R package
  version 1.1-2. https://CRAN.R-project.org/package=RColorBrewer
 - Package 'hexbin' by    Dan Carr, ported by Nicholas Lewin-Koh, Martin Maechler and contains copies of lattice functions written by Deepayan Sarkar (2015).  hexbin: Hexagonal Binning Routines. R package version 1.27.1.  https://CRAN.R-project.org/package=hexbin
-- Package 'palinsol' by one of the authors:
-  Michel Crucifix (2016). palinsol: Insolation for Palaeoclimate
-  Studies. R package version 0.94.
-  https://bitbucket.org/mcrucifix/insol
+
+insolations are obtained using the Package 'palinsol' : M. Crucifix (2016). palinsol: Insolation for Palaeoclimate
+  Studies. R package version 0.94. https://cran.r-project.org/package=palinsol
 
