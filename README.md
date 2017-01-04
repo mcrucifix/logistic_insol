@@ -9,7 +9,7 @@ accepted for publication in Nature (reference to be provided)
 
 ## Data
 
-- `caloric_peaks.csv` : master data supporting the article containing
+- [caloric_peaks.csv](Data/caloric_peaks.csv) : master data supporting the article containing
     -  row index 
     -  Time.ka.BP : Time in thousands of years BP correponding to Caloric Insolation peaks 
     -  MIS.or.peak.age : Label (MIS number or peakr age) used throughouth the paper
@@ -18,27 +18,30 @@ accepted for publication in Nature (reference to be provided)
     - Caloric.summer.insolation.at.65N.GJm.2 : caloric summer insolation at 65 degrees N in GJ/m2 
     - Elapsed.time.ka : Elapsed time since latest insolation peak yielding an interglacial onset
     - Effective.energy.GJm.2 : Effective energy as used on Figure 5 
-- `detrended_LR04_smoothed.csv`
-- `detrended_S05.csv`
-- `insolations.csv`
+- [detrended_LR04_smoothed.csv](Data/detrended_LR04_smoothed.csv)
+- [detrended_S05.csv](Data/detrended_S05)
+- [insolations.csv](Data/insolations.csv)
     - Insolations computed based on the Berger and Loutre (1990) solution and obtained using the `palinsol` R package (see below)
-- `solstice_peaks.csv`
-    - same as `caloric_peaks.csv` but using summer solstice, as used for Extended Data Figure 9. 
+- [solstice_peaks.csv](Data/solstice_peaks.csv)
+    - same as [caloric_peaks.csv](Data/caloric_peaks.csv)  but using summer solstice, as used for Extended Data Figure 9. 
 
 ## R
 
 This R code is provided under MIT Licence (see LICENCE file attached)
 
-- `main.R` is the master file which load experiment parameters and generate simulation output in the `RData` directory
+- [main.R] is the master file which load experiment parameters and generate simulation output in the [RData](RData) directory
 
-- `experiment.R` contains the MCMC simulation procedure
-- `analysis_function.R` contain supporting functions
-- `plot_mpt.R` loads  simulation output in the `RData` directory to generate  Extended Data Figure S10
-- `plot_frequent_traj` loads simualtion output in the `RData` directory to generate Figure 6
-- `diag_last_1000k.R` generates the data  (`quantiles_part_1.Rda`) as well as a figure similar to Figure 4, 
+- [experiment.R](R/experiment.R) contains the MCMC simulation procedure
+- [analysis_function.R](R/analysis_function.R) contains supporting functions
+- [plot_mpt.R](R/plot_mpt.R) loads  simulation output in the [RData](RData) directory to generate  Extended Data Figure S10
+- [plot_frequent_traj](R/plot_frequent_traj) loads simualtion output in the [RData](RData) directory to generate Figure 6
+- [diag_last_1000k.R](R/diag_last_1000k.R) generates the data  ([quantiles_part_1.Rda](RData/quantiles_part_1.Rda)) as well as a figure similar to Figure 4, 
 but the figure actually published underwent further editing for nice placement of labels. 
-- `diag_last_2500k.R` generates the data (`quantiles_25_part_3.RDa`) as well as a figure similar to Extended Data Figure 5,
-but the figure actually published underwent further editing for nice placement of labels. 
+- [diag_last_2500k.R](R/diag_last_2500k.R) generates the data 
+([quantiles_part_1.Rda](RData/quantiles_part_1.Rda)) 
+as well as a figure similar to Extended Data Figure 5,
+but the  published figure underwent further editing for nice placement of labels. 
+
 ## RData
 
 Contains `RData` binary files, directly loadable in `R`, with the output of the Monte-Carlo experiments 
@@ -58,13 +61,10 @@ We are grateful to the developers of R:
 
 we also use the following packages for plotting: 
 
-  - Erich Neuwirth (2014). RColorBrewer: ColorBrewer Palettes. R package
+- Erich Neuwirth (2014). RColorBrewer: ColorBrewer Palettes. R package
  version 1.1-2. https://CRAN.R-project.org/package=RColorBrewer
-
- - Package 'hexbin' by    Dan Carr, ported by Nicholas Lewin-Koh, Martin Maechler and contains copies of lattice functions written by Deepayan Sarkar (2015).  hexbin: Hexagonal Binning Routines. R package version 1.27.1.  https://CRAN.R-project.org/package=hexbin
-  
-
- - Package 'palinsol' by one of the authors:
+- Package 'hexbin' by    Dan Carr, ported by Nicholas Lewin-Koh, Martin Maechler and contains copies of lattice functions written by Deepayan Sarkar (2015).  hexbin: Hexagonal Binning Routines. R package version 1.27.1.  https://CRAN.R-project.org/package=hexbin
+- Package 'palinsol' by one of the authors:
   Michel Crucifix (2016). palinsol: Insolation for Palaeoclimate
   Studies. R package version 0.94.
   https://bitbucket.org/mcrucifix/insol
