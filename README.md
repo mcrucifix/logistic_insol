@@ -25,6 +25,9 @@ accepted for publication in Nature (reference to be provided)
 - [solstice_peaks.csv](Data/solstice_peaks.csv)
     - same as [caloric_peaks.csv](Data/caloric_peaks.csv)  but using summer solstice, as used for Extended Data Figure 9. 
 
+Note : Microsoft Excel Open XML Format (`Xlsx`) are also provided in the `Xlsx` directory, along with the data file ['2016-02-02407A_SI_Tables_S1_and_S2.xlsx'](Data/Xlsx/2016-02-02407A_SI Tables S1 and S2_ew.xlsx') provided as supplementary tables of the Nature article. 
+#
+
 ## R
 
 This R code is provided under MIT Licence (see LICENSE file attached)
