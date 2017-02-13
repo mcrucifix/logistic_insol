@@ -1,7 +1,7 @@
 # Greatly inspired from https://github.com/mylesmharrison/5_ways_2D_histograms/blob/master/5_ways_2D_histograms.R
 # Color housekeeping
 
-postscript(file.path(EPSPATH, 'Ramp_distribution.eps', width=134/22.54, height=6, pointsize=7))
+postscript(file.path(EPSPATH, 'Ramp_distribution.eps'), width=134/22.54, height=6, pointsize=7)
 library(RColorBrewer)
 
 # we had some debate about the color scheme.... 
@@ -23,8 +23,8 @@ library(grid)
 some.plot = hexbinplot(df$End.Age ~ df$Begin.Age, xbins=30,  colorcut=seq(0,1,length=10), maxcnt=90 , mincnt=0, 
             vp = viewport(x=0.3,y=0.5,
             default.units='npc',angle=0,height=0.9), 
-            xlab = 'Start of the ramp [kyr]', 
-            ylab = 'End of the ramp [kyr]', colramp=rf, axes=FALSE, cex.lab=0.8, cex.axis=1, 
+            xlab = 'End of the ramp [kyr]', 
+            ylab = 'Start of the ramp [kyr]', colramp=rf, axes=FALSE, cex.lab=0.8, cex.axis=1, 
             scales=list(x=list(at=seq(0,7)*200), y=list(at=1000+seq(0,7)*200))
             )
 
